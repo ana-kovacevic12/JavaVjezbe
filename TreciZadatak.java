@@ -1,24 +1,29 @@
-package com.udg.edu;
+package vjezbanje;
+
 import java.util.Scanner;
 
 public class TreciZadatak {
+
 	public static void main(String[] args) {
-		int N, i;
-		long p = 1;
-
-		Scanner sc = new Scanner(System.in);
-
-		System.out.print("Unesi N: ");
-		N = sc.nextInt();
-
-		for (i = 1; i <= N; i++)
-			p *= i;
-
-		System.out.printf("%d! = %d%n", N, p);
+		Scanner sc=new Scanner(System.in);
+		
+		String rijec=sc.nextLine();
+		
+		boolean nadjeno=false;
+		
+		
+		for(int i=0;i<rijec.length()-1;i++) {
+			if(rijec.charAt(i)==rijec.charAt(i+1)) {
+				System.out.println("Nasli smo dva ista slova i to je : " + rijec.charAt(i) + " i to na poziciji " + (i+1));
+				nadjeno=true;		
+				
+			}
+		}
+		if(!nadjeno) {
+			System.out.println("Nema povezanih slova");
+		
 		sc.close();
+		}
 	}
+
 }
-	
-
-
-

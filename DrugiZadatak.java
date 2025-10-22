@@ -1,24 +1,20 @@
-package com.udg.edu;
+package vjezbanje;
+
 import java.util.Scanner;
+
 public class DrugiZadatak {
 
 	public static void main(String[] args) {
-		int x;
-		float f;
-		Scanner sc=new Scanner (System.in);
-		System.out.print("Unesi x: ");
-		x=sc.nextInt();
+		Scanner sc = new Scanner(System.in);
 		
-		if (x<1)
-			f=x*x;
-		else
-			if(x>= 1 && x<5)
-				f=2-x;
-			else
-				f=(float)(x*x*x-1)/5;
-		System.out.printf("f(%d)=%.2f",x,f);
+		System.out.print("Unesite rijec: ");
+		
+		String rijec = sc.nextLine().trim();
+		String obrnutarijec = new StringBuilder(rijec).reverse().toString();
+		
+		System.out.print(rijec.equalsIgnoreCase(obrnutarijec));
+		
 		sc.close();
-		
 
 	}
 
