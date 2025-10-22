@@ -2,18 +2,23 @@ package vjezbanje;
 
 import java.util.Scanner;
 
-public class Zadatak1 {
+public class Pravougaonik {
 
 	public static void main(String[] args) {
+		
 		Scanner sc=new Scanner(System.in);
 		
 		double a=sc.nextDouble();
 		double b=sc.nextDouble();
 		
-		double rezultat=(a+b)/2;
+		if(b/2>=a) {
+			System.out.println("Moguce je napraviti bar 2 kvadrata.");
+		}else {
+			System.out.println("Nije moguce.");
+		}
 		
-		System.out.print(rezultat);
 		sc.close();
+		}
 	}
 
-}
+
