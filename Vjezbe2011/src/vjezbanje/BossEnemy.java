@@ -11,4 +11,13 @@ public class BossEnemy extends Enemy{
 	 public int getEffectiveDamage() {
 		 return getDamage() * 2;
 }
+
+	//to string metoda
+	 @Override
+	 public String toString() {
+		return "BossEnemy [getEffectiveDamage()=" + getEffectiveDamage() + ", getType()=" + getType() + ", getDamage()="
+				+ getDamage() + ", getHealth()=" + getHealth() + ", getCollider()=" + getCollider() + ", getX()="
+				+ getX() + ", getY()=" + getY() + "]";
+	 }
 }
+

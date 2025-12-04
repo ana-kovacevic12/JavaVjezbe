@@ -44,7 +44,8 @@ public class Player extends GameObject {
 	}
 	
 	//provjera za ime i veliko slovo pocetno
-		String ime1=ime.trim();{
+		String ime1=ime.trim();
+		private int width;{
 		
 		if (ime1.length()>0){
 			String ime2=ime1.substring(0,1).toUpperCase();
@@ -55,6 +56,15 @@ public class Player extends GameObject {
 			System.out.println("igrac mora imati name.");
 		}}
 
+		//provjera za sudar pravougaonika
+		private boolean intersectsRectangle(RectangleCollider other) {
+	        return this.getX() < other.getX() + other.getWidth() &&
+	               this.getX() + this.width > other.getX() &&
+	               this.getY() < other.getY() + other.getHeight() &&
+	               this.getY() + this.health > other.getY();
+	              
+	    
+	    }
 		//metoda getdisplayname
 		 @Override
 		    public String getDisplayName() {

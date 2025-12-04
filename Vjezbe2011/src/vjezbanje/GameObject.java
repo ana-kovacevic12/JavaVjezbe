@@ -57,6 +57,10 @@ public abstract class GameObject {
 	@Override
 	public String toString() {
 		return "{'klasa': 'GameObject',Collider ': '" + getCollider() + "' , 'x': '" +  getX() + "' , 'y': '" + getY() + "'}";
+	}
+	public boolean intersects(Collidable other) {
+		// TODO Auto-generated method stub
+		return false;
 	}}
 
 
